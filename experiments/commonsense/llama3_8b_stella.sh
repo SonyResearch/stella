@@ -35,6 +35,7 @@ tools/finetune.py \
     --lora_r $LORA_R --lora_alpha $LORA_ALPHA \
     --lr_scheduler_type $LR_SCHEDULE --stella_init $INIT \
     --bf16 True --fp16 False \
+    --stella_diag_s True \
     --stella_retraction $RETRACTION --optimizer $OPTIMIZER \
     2>&1 | tee -a $WORK_DIR/finetune.txt
 
