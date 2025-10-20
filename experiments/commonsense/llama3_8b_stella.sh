@@ -21,7 +21,6 @@ export TOKENIZERS_PARALLELISM=true
 
 mkdir -p $WORK_DIR
 
-# debugpy --listen 5678 --wait-for-client \
 python \
 tools/finetune.py \
     --base_model "$BASE_MODEL" \
