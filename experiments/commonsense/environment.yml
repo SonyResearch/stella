@@ -280,3 +280,5 @@ dependencies:
   - zipp=3.21.0
   - zstandard=0.23.0
   - zstd=1.5.6
+  - pip:
+    - git+https://github.com/SonyResearch/stella.git
