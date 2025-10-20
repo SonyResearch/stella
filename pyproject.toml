@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stella"
+version = "0.1"
+description = "Stella."
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "peft",
+]
+
+[project.optional-dependencies]
+train = []
+build = []
+
+[tool.setuptools.packages.find]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*", "experiments*"]
+
+[tool.wheel]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*", "experiments*"]
+
+[tool.black]
+# Only used by `hf-doc-builder´.
+line-length = 119
+target-version = ['py38']
+
+[tool.ruff]
+target-version = "py38"
+line-length = 119
+extend-exclude = ["*.ipynb", "experiments/*"]
+
+[tool.ruff.lint]
+preview = true
+explicit-preview-rules = true
+extend-select = [
+    "C", # Complexity
+    "E", # PEP8 errors
+    "F", # PEP8 formatting
+    "I", # Import sorting
+    "UP", # Pyupgrade upgrades
+    "W", # PEP8 warnings
+    "PT009", # Pytest assertions
+    "RUF022", # Sorting of __all__
+]
+ignore = [
+    "C901", # Function too complex
+    "E501", # Line length (handled by ruff-format)
+    "F841", # unused variable
+    "UP007", # X | Y style Unions
+]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+known-first-party = ["peft"]
+
+[tool.ruff.format]
+quote-style = "single"
