@@ -5,7 +5,6 @@
 ```bash
 mamba env create -f environment.yml
 conda activate commonsense
-pip install -e ../../  # Install the stella package
 ```
 
 ## Prepare Data
