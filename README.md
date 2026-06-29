@@ -4,7 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-NeurIPS%202025%20Spotlight-brightgreen)](https://arxiv.org/abs/2510.01938)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](/LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)]()
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.5%2B-red.svg)]()
 
 Official implementation of the NeurIPS 2025 Spotlight paper:  
